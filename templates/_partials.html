@@ -1,0 +1,57 @@
+{{define "header"}}
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a
+				href="/" class="navbar-brand"><i class="fa fa-cube"></i>Go-web-starter</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/aboutus">About</a></li>
+					<li><a href="/blog">Blog</a></li>
+					<li style="padding:13px;"><span class="badge"><a href="/register" style="color:white;">Register kit</a></span></li>
+					<li>
+						<div style="padding:8px;"><a href="/checkout" style="padding:5px 10px 5px 10px;max-width:110px;" class="btn btn-success">Buy now</a></div>
+					</li>
+					<li><a href="/contact">Support</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/login">Log in</a></li>
+					<li>
+						<div style="padding:4px;"></div><a href="/signup" style="padding:5px 10px 5px 10px;max-width:130px;" class="btn btn-info">Sign up for <strong>free</strong></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{{end}}
+
+{{define "footer"}}
+{{if true}}
+	<div style="margin-top:100px;" class="alert alert-info">REMINDER: This site is currently in development. All data, accounts, surveys, orders etc will be wiped frequently!</div>
+{{end}}
+	<footer>
+		<div class="container text-center">
+			<p class="pull-left">© 2015 Matt Barton. See Licence. All Rights Reserved</p>
+			<ul class="pull-right list-inline">
+				<li><a href="/contact">Contact / Support</a></li>
+			</ul>
+		</div>
+	</footer>
+{{end}}
+
+{{define "head"}}
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="csrf-token" content="aZs5RH7L7TOSSSYTN3z8t4YKPQPQnhZgTk0vs=">
+	<title>{{.}} - Go-web-starter</title>
+	<script src="/assets/jspm_packages/system.js"></script>
+	<script src="/assets/jspm-config.js"></script>
+	<script>
+		System.import('./assets/js/startup'); //note no .js on this file
+	</script>	
+	<!--<link rel="stylesheet" href="/assets/css/main.css" />-->
+</head>
+{{end}}

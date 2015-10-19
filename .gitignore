@@ -22,3 +22,6 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+public/jspm_packages
+node_modules
